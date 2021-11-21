@@ -1,0 +1,966 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Code Club Session 1",
+      "provenance": []
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.7.3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "tlQjW0e-61Qe"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/warwickdatascience/beginners-python/blob/master/session_two/session_two_blank_template.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "djTryOtV61Qk"
+      },
+      "source": [
+        "<center>Spotted a mistake? Report it <a href=\"https://github.com/warwickdatascience/beginners-python/issues/new\">here</a></center>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "CzIfObDn61Ql"
+      },
+      "source": [
+        "# Beginner's Python—Session Two Template"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "-Ceh1HnZIsVO"
+      },
+      "source": [
+        "## User Input"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "HBMJj3087Vgt"
+      },
+      "source": [
+        "Recap from session 1: don't need to type print() to get Python to ooutput information. Whenever you run a code that outputs a value, Python will try to print it automatically. But this only happens for the last code you evaluate in a cell\n",
+        "\n",
+        "Therefore, if want to output more than one thing, we must use print"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "E8lftMeb71qI",
+        "outputId": "8cb8b483-36ce-4637-dd4c-8e4ecdc5db31",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        }
+      },
+      "source": [
+        "\"This sentence will be printed even if I'm not using print() ahahahahahhahahaha\""
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            },
+            "text/plain": [
+              "\"This sentence will be printed even if I'm not using print() ahahahahahhahahaha\""
+            ]
+          },
+          "metadata": {},
+          "execution_count": 1
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ie37a60n7_d5"
+      },
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "COWwEYpN8FaR",
+        "outputId": "33965999-0ec8-4d74-b910-1b9d1d508238",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        }
+      },
+      "source": [
+        "\"This sentence won't show up\"\n",
+        "\"But this one will bruh\""
+      ],
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            },
+            "text/plain": [
+              "'But this one will bruh'"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 2
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "hZ99D0Nw8LSz",
+        "outputId": "5db8fc20-9098-418e-9ade-87bd348f256c",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "print(\"this will show up\")\n",
+        "print(\"So will this dude\")"
+      ],
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "this will show up\n",
+            "So will this dude\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "tkTyqlwQ8Unp",
+        "outputId": "712f7303-cb1a-4790-c653-4bd4fa59f8bd",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "6"
+      ],
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "6"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 4
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "6AZ6H-6jKoSt"
+      },
+      "source": [
+        "### Introduction\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "CVJV0SLf61Qo"
+      },
+      "source": [
+        "Use the input function to ask the user a question and print the response"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "D4l_2DsZIlgB"
+      },
+      "source": [
+        "x = 3"
+      ],
+      "execution_count": 8,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ZYRWFC4v9uVb",
+        "outputId": "98f9f5c1-648e-47c5-c5b5-75dfc5e155e2",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "type(x)"
+      ],
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "int"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 9
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "nz4z_TpM9xAY",
+        "outputId": "52be3294-30ba-4045-8d68-340440aeae8d",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "y=7\n",
+        "type(y)\n",
+        "int(y)"
+      ],
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "7"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 12
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "TUnH5VFh-ElO",
+        "outputId": "ea5c63fa-a2ac-4023-d4c5-3f712123b534",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "z=5\n",
+        "type(z)\n",
+        "type(z/2)"
+      ],
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "float"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 14
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "mI49TxPd-Klo"
+      },
+      "source": [
+        "Above - only prints the last row. See below for how to print both."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 166
+        },
+        "id": "9lLW387eKgNN",
+        "outputId": "a31beea6-da1e-410f-fabf-58e3a5a339a3"
+      },
+      "source": [
+        "Ask for numeric user input and assign this to a variable. Check this variables type and then convert it to an integer. Check the type again, perform some maths on the variable, and print the result"
+      ],
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-5-c57db9d1a4fa>\"\u001b[0;36m, line \u001b[0;32m1\u001b[0m\n\u001b[0;31m    Ask for numeric user input and assign this to a variable. Check this variables type and then convert it to an integer. Check the type again, perform some maths on the variable, and print the result\u001b[0m\n\u001b[0m          ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "bIr0l5kJI_VV"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "bhIRsChn61Qt"
+      },
+      "source": [
+        "### Standard Puzzles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "-rJLrVG-61Qu"
+      },
+      "source": [
+        "Remake the farm yard animal puzzle from session one using user input"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Sjlcfu_W61Qv"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "-QQBy5zi61Qv"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "jFfUV6NX61Qw"
+      },
+      "source": [
+        "### Bonus Puzzles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "oEilOxt-61Qx"
+      },
+      "source": [
+        "Try adding `\\r\\n` to the end of your question in `input()`"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "2BhZFOwl61Qx"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "X2OrD52W61Qx"
+      },
+      "source": [
+        "## Variables Types"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "uVBtn6x261Qy"
+      },
+      "source": [
+        "### Introduction"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ugd2y5P461Qy"
+      },
+      "source": [
+        "Add two strings together to concatenate their contents"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "cNyqptvD61Qz"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Gp0mnqM_61Qz"
+      },
+      "source": [
+        "Multiply a string by an integer"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Pclzfl2Z61Qz"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "GBR8vzu361Q0"
+      },
+      "source": [
+        "Try to multiply a string by a whole number stored as a float type to confirm that you recieve an error"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "iWombPXd61Q0"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "AaRlmuZc61Q0"
+      },
+      "source": [
+        "### Standard Puzzles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "XE2ylLLg61Q1"
+      },
+      "source": [
+        "What could go wrong with the presentation code?"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Y4A1jtFP61Q1"
+      },
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "WRqeUSxZ61Q1"
+      },
+      "source": [
+        "## Summation"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "zngz8LPU61Q2"
+      },
+      "source": [
+        "### Introduction"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "mzJ-PYPO61Q2"
+      },
+      "source": [
+        "Create a list of numbers"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "wWOzqnEW61Q2"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "trUePVKy61Q3"
+      },
+      "source": [
+        "Calculate the sum of these numbers and store this as a variable, then print this value"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "CZ2Bjvkt61Q3"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "9gJrjaSn61Q3"
+      },
+      "source": [
+        "### Standard Puzzles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "eVrsdxaU61Q3"
+      },
+      "source": [
+        "Create a list with the values 193, 452, 67, 891, and 10"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "KWI4j3GM61Q4"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "WJSJ2QDi61Q4"
+      },
+      "source": [
+        "Find the sum of the items in the list and store it as a variable"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "FCJVb01j61Q4"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "RON0kUEL61Q5"
+      },
+      "source": [
+        "Use this variable to print the sum as part of a meaningful statement"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "bby4tarb61Q8"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "y4VyTvvP61Q8"
+      },
+      "source": [
+        "### Bonus Puzzles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "tZ_JoXqN61Q8"
+      },
+      "source": [
+        "Confirm that lists can contain negative and decimal numbers and that `sum()` behaves as you would expect with these"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "CxshaoL861Q9"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "vGLFeFK561Q9"
+      },
+      "source": [
+        "## Min & Max"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "pZkzoEjp61Q9"
+      },
+      "source": [
+        "### Introduction"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "srgQjWbz61Q9"
+      },
+      "source": [
+        "Create a list of numbers"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "q82ITE7D61Q9"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "_HLeHE2W61Q-"
+      },
+      "source": [
+        "Calculate the minimum of this list and print it in a meaningful statement"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "sfIXbg7C61Q-"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "pIIQp-3v61Q-"
+      },
+      "source": [
+        "Repeat this for the maximum"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Kkdvszqa61Q-"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ZTpNv-Ld61Q-"
+      },
+      "source": [
+        "### Standard Puzzles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "vb3oVOEh61Q_"
+      },
+      "source": [
+        "Create a list of numbers and find the minimum and maximum"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "J_6YdxWl61Q_"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "c32yKxz261Q_"
+      },
+      "source": [
+        "Use these to find the range of the data and print this in a meaningful statement"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "bxKUKn1561Q_"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "p_QICCbf61RA"
+      },
+      "source": [
+        "## Length"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "SfTjrxOg61RA"
+      },
+      "source": [
+        "### Introduction"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "h17CxTdU61RA"
+      },
+      "source": [
+        "Create a list of numbers and print the number of items it contains"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "_fjKpkj661RB"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Nkp-kpDL61RB"
+      },
+      "source": [
+        "Create a string and print out the number of characters it contains"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "bbwAmAyk61RB"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "1glUiULc61RB"
+      },
+      "source": [
+        "### Standard Puzzles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "JpEW4JGU61RB"
+      },
+      "source": [
+        "Ask the user for a string input"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "QwXaDSBV61RC"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "6BzsFgIs61RC"
+      },
+      "source": [
+        "Output the length of this string"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "w4S0c4Gl61RC"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "41FWThaJ61RC"
+      },
+      "source": [
+        "### Bonus Puzzles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "wowvOBlB61RC"
+      },
+      "source": [
+        "Use the supplied code to let the user input the values of a list"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "8HSK2fCX61RD"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "_43PwpKC61RD"
+      },
+      "source": [
+        "Print the length of this list"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Eg5NShrI61RD"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
