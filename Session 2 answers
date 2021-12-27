@@ -1,0 +1,1497 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/sammoody907/sammoody907/blob/main/Session%202%20answers\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "fTM70ZTuFcPU"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/warwickdatascience/beginners-python/blob/master/session_two/session_two_blank_template.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "W5qce-AmFcPY"
+      },
+      "source": [
+        "<center>Spotted a mistake? Report it <a href=\"https://github.com/warwickdatascience/beginners-python/issues/new\">here</a></center>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "iCMRmNj6FcPZ"
+      },
+      "source": [
+        "# Beginner's Python—Session Two Template"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "-Ceh1HnZIsVO"
+      },
+      "source": [
+        "## User Input"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "6AZ6H-6jKoSt"
+      },
+      "source": [
+        "### Introduction\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ts8-vISoFcPa"
+      },
+      "source": [
+        "Use the input function to ask the user a question and print the response"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "D4l_2DsZIlgB",
+        "outputId": "f95f176c-2ace-40d2-f3c8-7520f33b9712"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "What is your favourite foodchick\n"
+          ]
+        }
+      ],
+      "source": [
+        "food = input(\"What is your favourite food\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "the variable food then takes the value of whatever the user has inputted as their favourite food"
+      ],
+      "metadata": {
+        "id": "-mkTO34qG1Ga"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"no way, my favourite food is\", food, \"too\",\"!\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Yb9sElJdG03S",
+        "outputId": "5e9b5555-15e4-423b-baab-3eaf31f2ca41"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "no way, my favourite food is chick too !\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "  For consistency, the input command will always return a string, even if the user input is better suited to a diff var type. Therefore, may need to convert the variable storing the user input to a different type"
+      ],
+      "metadata": {
+        "id": "BllencDeHOtw"
+      }
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "9lLW387eKgNN"
+      },
+      "source": [
+        "Ask for numeric user input and assign this to a variable. Check this variables type and then convert it to an integer. Check the type again, perform some maths on the variable, and print the result"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "baker = input(\"How many doughnuts in a baker's dozen?\")\n",
+        "print(type(baker))\n",
+        "baker = int(baker)\n",
+        "print (type(baker))\n",
+        "dozen = baker-1\n",
+        "print (\"There are\",dozen,\"doughnuts in a non-baker's dozen\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ktf4yczeIF5j",
+        "outputId": "42d790b3-99b6-4d84-a17a-6df0a5b2f5e0"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "How many doughnuts in a baker's dozen?13\n",
+            "<class 'str'>\n",
+            "<class 'int'>\n",
+            "There are 12 doughnuts in a non-baker's dozen\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Can do the above in less lines, by 'nesting' functions, or putting one thing inside of another"
+      ],
+      "metadata": {
+        "id": "ntHl-6T1Jy61"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "baker_2 = int(input(\"How many doughnuts are in a baker's dozen\"))\n",
+        "print(type(baker_2))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yRqPbd4TJ6Os",
+        "outputId": "c24aa004-db58-4220-a641-4b7a4ba1d102"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "How many doughnuts are in a baker's dozen13\n",
+            "<class 'int'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "fFBa1kF4FcPd"
+      },
+      "source": [
+        "### Standard Puzzles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "IZRdp0UXFcPd"
+      },
+      "source": [
+        "Remake the farm yard animal puzzle from session one using user input"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Create 3 variables storing the number of chickens, cows, and pigs you have on an imaginary farm, using user input "
+      ],
+      "metadata": {
+        "id": "41L5AhWvK8oZ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 12,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qm--gpAmFcPd",
+        "outputId": "3c216fa5-b6af-4c7f-afcf-eff7b27991a6"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "How many chickens are on your imaginary farm?3\n",
+            "How many cows are on your imaginary farm?5\n",
+            "How many pigs are on your imaginary farm?1\n"
+          ]
+        }
+      ],
+      "source": [
+        "chickens=int(input(\"How many chickens are on your imaginary farm?\"))\n",
+        "cows = int(input(\"How many cows are on your imaginary farm?\"))\n",
+        "pigs = int(input(\"How many pigs are on your imaginary farm?\"))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "If you hold down alt while clicking cursor in front of two different places, can type the same thing simultaenously in these places."
+      ],
+      "metadata": {
+        "id": "q19PK-3bMN0y"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Then, use these variables to print how many legs there are in total on the farm (including yours)"
+      ],
+      "metadata": {
+        "id": "IK7o3kouLLwU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 15,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KEpUPkX7FcPe",
+        "outputId": "714a252e-e0c6-45b9-c539-cafa0d43ea82"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "32\n",
+            "<class 'int'>\n"
+          ]
+        }
+      ],
+      "source": [
+        "legs=(chickens*2)+(cows*4)+(pigs*4)+2\n",
+        "print(legs)\n",
+        "print(type(legs))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        ""
+      ],
+      "metadata": {
+        "id": "_4Lqq1r6OL64"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Just trying something below - Tried to create animal legs variable within the print line, but returned an error, so had to produce the animal legs variable separately first"
+      ],
+      "metadata": {
+        "id": "iCLdMFTTMkFE"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "animal_legs=(chickens*2)+(cows*4)+(pigs*4)\n",
+        "print(\"There are\",animal_legs,\"animal legs on your imaginary farm!!!!!\")"
+      ],
+      "metadata": {
+        "id": "LnzSvdB2MlxE",
+        "outputId": "4af8016c-9258-4b8d-ad1f-aaf34cb8d43a",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "There are 30 animal legs on your imaginary farm!!!!!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "But, you can do a calculation within a print function, just can't produce a variable - I think "
+      ],
+      "metadata": {
+        "id": "fTGbFZi3OJ4d"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"Considering only human and pig legs, there are\",2+pigs*4,\"legs on the imaginary farm\")"
+      ],
+      "metadata": {
+        "id": "Wvwfu1T_Pgkl",
+        "outputId": "6d077849-1579-4975-af7c-e616a151c110",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Considering only human and pig legs, there are 6 legs on the imaginary farm\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Python doesn't generally care about spaces and new lines, so see below:"
+      ],
+      "metadata": {
+        "id": "wc1uPiWBN1HF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"There are\",\n",
+        "      chickens*2+cows*4+2,\n",
+        "      \"combined human, chicken and cow legs on your imaginary farm\") \n"
+      ],
+      "metadata": {
+        "id": "65dSFf9jN5Jl",
+        "outputId": "44426016-b41f-4c34-be62-2e8bbc993f7f",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 20,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "There are 28 combined human, chicken and cow legs on your imaginary farm\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "dOuSpI7PFcPe"
+      },
+      "source": [
+        "### Bonus Puzzles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "nFK-vn_XFcPe"
+      },
+      "source": [
+        "Try adding `\\r\\n` to the end of your question in `input()`"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 26,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eNii7DYxFcPf",
+        "outputId": "e7e94485-3d57-4c1d-a7f3-22c8a2e81ee4"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "How may scary stories do you know?\r\n",
+            "12\n"
+          ]
+        }
+      ],
+      "source": [
+        "stories=int((input(\"How may scary stories do you know?\\r\\n\")))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "LzmK59zfFcPf"
+      },
+      "source": [
+        "## Variables Types"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "hsSx4rQhFcPf"
+      },
+      "source": [
+        "### Introduction"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "OjHbifo7FcPf"
+      },
+      "source": [
+        "Add two strings together to concatenate their contents"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 27,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3Utbmd1mFcPf",
+        "outputId": "a470d759-62e6-4f1d-e2d7-a3d2cb7e775d"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ChickenNoodles\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(\"Chicken\" + \"Noodles\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "r0W-4v3cFcPg"
+      },
+      "source": [
+        "Multiply a string by an integer"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 28,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rtP3u1wGFcPg",
+        "outputId": "996dd72f-6b79-4a16-e6ca-c2ab5b027490"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ChickenChickenChicken\n"
+          ]
+        }
+      ],
+      "source": [
+        "print (\"Chicken\"*3)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"Ellipses...\"*3)"
+      ],
+      "metadata": {
+        "id": "38bthx60U7wT",
+        "outputId": "10da79d1-f2c0-4961-f47c-0f47ba7787dc",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 29,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Ellipses...Ellipses...Ellipses...\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "beLet9HMFcPg"
+      },
+      "source": [
+        "Try to multiply a string by a whole number stored as a float type to confirm that you recieve an error"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 30,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 166
+        },
+        "id": "sUNuoeTKFcPg",
+        "outputId": "80ea9ed7-531c-40f9-e055-415cfbe29d36"
+      },
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "TypeError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-30-aeab9e161a35>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Ellipses\"\u001b[0m\u001b[0;34m*\u001b[0m\u001b[0;36m3.0\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m: can't multiply sequence by non-int of type 'float'"
+          ]
+        }
+      ],
+      "source": [
+        "print(\"Ellipses\"*3.0)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Multiplying a string variable by a number only works if the variable type of the number is integer. "
+      ],
+      "metadata": {
+        "id": "-TIh1Yf3VCOv"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "S6ozf4u3FcPg"
+      },
+      "source": [
+        "### Standard Puzzles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "roNhM9ceFcPg"
+      },
+      "source": [
+        "What could go wrong with the presentation code?"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "w7FSlJh_FcPh"
+      },
+      "source": [
+        "Enter the answer as the string version of the answer, rather than the numeric value. The int function would be able to convert variable type to int if entered 24.0 but Python doesn't know how to convert \"twenty four\" to an integer."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "RU6GGP9RFcPh"
+      },
+      "source": [
+        "## Summation"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "71I_NPIbFcPh"
+      },
+      "source": [
+        "### Introduction"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Can use a special type of variable, called a list, to sum a collection of numbers. We will come onto this in more detail later on in the course, but for now all you need to know is that you can create a list by filling a set of square brackets with a comma-separated sequence of values.\n",
+        "We can then use the list as an input to sum"
+      ],
+      "metadata": {
+        "id": "Agy_JpskWk4q"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "rBvpaxATFcPh"
+      },
+      "source": [
+        "Create a list of numbers"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 32,
+      "metadata": {
+        "id": "uViznCPeFcPh"
+      },
+      "outputs": [],
+      "source": [
+        "numbers = [12, 1, 42,  7, 6]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "_3dXzGX2FcPi"
+      },
+      "source": [
+        "Calculate the sum of these numbers and store this as a variable, then print this value"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 33,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jCAB_1U8FcPi",
+        "outputId": "5ae41ee2-5162-48bb-ee02-bd24e48fc70e"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "68\n",
+            "<class 'int'>\n"
+          ]
+        }
+      ],
+      "source": [
+        "total = sum(numbers)\n",
+        "print(total)\n",
+        "print(type(total))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Ijf2NZy1FcPi"
+      },
+      "source": [
+        "### Standard Puzzles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "JqBv6aFAFcPi"
+      },
+      "source": [
+        "Create a list with the values 193, 452, 67, 891, and 10"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 35,
+      "metadata": {
+        "id": "ocEQpA1wFcPi"
+      },
+      "outputs": [],
+      "source": [
+        "numbers2=[193,452,67,891,10]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "i7JeNl5dFcPi"
+      },
+      "source": [
+        "Find the sum of the items in the list and store it as a variable"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 37,
+      "metadata": {
+        "id": "Wo9YquVgFcPi"
+      },
+      "outputs": [],
+      "source": [
+        "total2=sum(numbers2)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "1vVdalB0FcPj"
+      },
+      "source": [
+        "Use this variable to print the sum as part of a meaningful statement"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 38,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gW45Tj_jFcPj",
+        "outputId": "3b64a832-3334-457a-9d8d-9193fc541137"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Those are quite large numbers, so I've used Python to calulclate that you get the number 1613 if you add them together\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(\"Those are quite large numbers, so I've used Python to calulclate that you get the number\",\n",
+        "      total2,\n",
+        "      \"if you add them together\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Trying something below"
+      ],
+      "metadata": {
+        "id": "VuFa_fjhYSEW"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "total3=sum([1,2,3,4,5])\n",
+        "print(total3)"
+      ],
+      "metadata": {
+        "id": "qJnkgHckYTat",
+        "outputId": "1a01e08f-f151-46f1-aec9-11518b30be91",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 40,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "15\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "total4=sum[4,5,6,7]\n",
+        "print(\"I'm trying to remove the curved brackets and still return the total as being\",total4)"
+      ],
+      "metadata": {
+        "id": "-gL4R9RUYb-0",
+        "outputId": "e4b02769-65c7-48d2-d350-b2c0abccec15",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 182
+        }
+      },
+      "execution_count": 41,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "TypeError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-41-8eac356f40ea>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mtotal4\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0msum\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m4\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;36m5\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;36m6\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;36m7\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      2\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"I'm trying to remove the curved brackets and still return the total as being\"\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0mtotal4\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mTypeError\u001b[0m: 'builtin_function_or_method' object is not subscriptable"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "W_T_S5qMFcPj"
+      },
+      "source": [
+        "### Bonus Puzzles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Wu5FU_NmFcPj"
+      },
+      "source": [
+        "Confirm that lists can contain negative and decimal numbers and that `sum()` behaves as you would expect with these"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 43,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZE97nTwNFcPj",
+        "outputId": "dbefd5fe-2a4c-425b-e62f-fbf72a0461d1"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "50.5\n",
+            "<class 'float'>\n",
+            "8\n",
+            "<class 'int'>\n",
+            "-2.3\n",
+            "<class 'float'>\n"
+          ]
+        }
+      ],
+      "source": [
+        "bonustotal=sum([3, 4.5, 1, 42])\n",
+        "print(bonustotal)\n",
+        "print(type(bonustotal))\n",
+        "bonustotal2=sum([1, -4, -5, 16])\n",
+        "print(bonustotal2)\n",
+        "print(type(bonustotal2))\n",
+        "bonustotal3=sum([1, -4, -5, 5.7])\n",
+        "print(bonustotal3)\n",
+        "print(type(bonustotal3))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "orQWMBEaFcPj"
+      },
+      "source": [
+        "## Min & Max"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Summation is not the only thing we can do with lists. Python has max() and min() functions"
+      ],
+      "metadata": {
+        "id": "sP7StJXOZvxJ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "dgtDlxBVFcPj"
+      },
+      "source": [
+        "### Introduction"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "FfGe_kcBFcPj"
+      },
+      "source": [
+        "Create a list of numbers"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 48,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kcCh2E4SFcPk",
+        "outputId": "29f8a158-e448-4daf-fedb-ff8ba9f1247a"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The fattest baby is 64 kg!\n",
+            "The lightest baby is 19 kg!\n"
+          ]
+        }
+      ],
+      "source": [
+        "fattest=max([25,30,35,64,19])\n",
+        "print(\"The fattest baby is\",fattest,\"kg!\")\n",
+        "lightest=min([25,30,35,64,19])\n",
+        "print(\"The lightest baby is\",lightest,\"kg!\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "He showed an example of where he called a variable min, then ran code and it returned an error if the code was run more than once. This was as the variable name shared a name with a Python function (i.e. min). See code just below showing this."
+      ],
+      "metadata": {
+        "id": "X03t0aHhaqLa"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "If do  something like this,  where mess things up and set a variable name the same thing as a function, can go to runtime --> restart runtime"
+      ],
+      "metadata": {
+        "id": "zJO7P5xubOz1"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(type(min))"
+      ],
+      "metadata": {
+        "id": "-tAe37zTa97e",
+        "outputId": "f3dcf6c1-a578-4af1-9030-a72df187c259",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 50,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'builtin_function_or_method'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "pXMJWQmfFcPk"
+      },
+      "source": [
+        "Calculate the minimum of this list and print it in a meaningful statement"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 49,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "JJxjEkUGFcPk",
+        "outputId": "b2f53c1f-818f-4eeb-adfd-e4d9d284e29c"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "I've done this above\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(\"I've done this above\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "zFVZwXZTFcPk"
+      },
+      "source": [
+        "Repeat this for the maximum"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 52,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eBeuQ45HFcPk",
+        "outputId": "fe7309f2-7c14-48b0-e608-63d6b2b6de4e"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "I've done this above\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(\"I've done this above\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "h3quFrGMFcPk"
+      },
+      "source": [
+        "### Standard Puzzles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "7pd8q9EoFcPk"
+      },
+      "source": [
+        "Create a list of numbers and find the minimum and maximum"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 57,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1pkG-hNzFcPk",
+        "outputId": "e14366bf-4e7b-400f-cffd-b9a979dc0aa5"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The tallest person is 185 cm\n",
+            "The smallest person is 15 cm\n"
+          ]
+        }
+      ],
+      "source": [
+        "heights=[183, 185, 178, 169, 15]\n",
+        "max_height=max(heights)\n",
+        "print(\"The tallest person is\",\n",
+        "      max_height,\n",
+        "      \"cm\")\n",
+        "min_height=min(heights)\n",
+        "print(\"The smallest person is\",\n",
+        "      min_height,\n",
+        "      \"cm\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "There is a range function in Python, but this does not calculate the range of a list. Does something else.\n",
+        "Note, linked to the above, we should not name a variable 'range' as this is already the name of a function"
+      ],
+      "metadata": {
+        "id": "MgPYBjPObmN-"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "CsM1v_GHFcPk"
+      },
+      "source": [
+        "Use these to find the range of the data and print this in a meaningful statement"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 58,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0ijOUhjtFcPl",
+        "outputId": "af3641f4-a89a-4a83-ea0d-081dfd808fb0"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The height difference between the tallest and shortest person is 170 cm\n"
+          ]
+        }
+      ],
+      "source": [
+        "height_range=max_height-min_height\n",
+        "print(\"The height difference between the tallest and shortest person is\",\n",
+        "      height_range,\n",
+        "      \"cm\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Dus3bQNCFcPl"
+      },
+      "source": [
+        "## Length"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "tbe3qw4uFcPl"
+      },
+      "source": [
+        "### Introduction"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "d-ZZp7S1FcPl"
+      },
+      "source": [
+        "Create a list of numbers and print the number of items it contains"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 59,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MyB5cfgPFcPl",
+        "outputId": "63f21229-6f91-4e42-c66d-cf3090bb2254"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(len(heights))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Note just above, we have printed the length of the list directly without first saving the length as a variable. Either way would work though/"
+      ],
+      "metadata": {
+        "id": "mabJxhXQdGWf"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(len([1,2,3,4,5,6,7,8,9,10]))"
+      ],
+      "metadata": {
+        "id": "ORRZZMtMdRJO",
+        "outputId": "e7de311b-7c66-48d0-dcb5-fd71543d23bf",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 60,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "listlength=len([1,2,3,5,5,5,5,5,5,5,5,5,5,5,5,5,5])\n",
+        "print(listlength)"
+      ],
+      "metadata": {
+        "id": "hZSz73spdWEO",
+        "outputId": "02e049bd-3655-4530-9fdd-9a21a77e1126",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 62,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "17\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "K3U3076dFcPl"
+      },
+      "source": [
+        "Create a string and print out the number of characters it contains"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 63,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HiNVNIgJFcPl",
+        "outputId": "c18d62ca-0af0-427a-fdbe-92ca6b964e56"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "13\n"
+          ]
+        }
+      ],
+      "source": [
+        "eg_sentence=\"My name Jeff!\"\n",
+        "print(len(eg_sentence))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "qv11YL_pFcPl"
+      },
+      "source": [
+        "### Standard Puzzles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "SYhLF_UFFcPm"
+      },
+      "source": [
+        "Ask the user for a string input"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 64,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KwSYIn2XFcPo",
+        "outputId": "addb3b9b-4857-4308-e237-ac243c5d126c"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Please enter an example sentence\r\n",
+            "You stink you nerd\n"
+          ]
+        }
+      ],
+      "source": [
+        "user_sentence=input(\"Please enter an example sentence\\r\\n\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "QeT_H4pZFcPo"
+      },
+      "source": [
+        "Output the length of this string"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 65,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Gd-j0qAQFcPo",
+        "outputId": "1c77729a-cc81-4ef3-8eb9-6b90527a9fd0"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "18\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(len(user_sentence))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "WS48qqs-FcPo"
+      },
+      "source": [
+        "### Bonus Puzzles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "bt2BASSSFcPp"
+      },
+      "source": [
+        "Use the supplied code to let the user input the values of a list"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 68,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "prbtIIvIFcPp",
+        "outputId": "13851079-9eb9-44f8-b6c0-9d83cba20089"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "What are the numbers in your list\r\n",
+            "1, 2, 3, 5\n",
+            "Your list is: [1, 2, 3, 5]\n"
+          ]
+        }
+      ],
+      "source": [
+        "rawdata=input(\"What are the numbers in your list\\r\\n\")\n",
+        "user_numbers=list(map(int,rawdata.split(',')))\n",
+        "print(\"Your list is:\", user_numbers)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "wsajlsEJFcPp"
+      },
+      "source": [
+        "Print the length of this list"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 69,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "izZY1y8vFcPp",
+        "outputId": "8c6dbdfb-53ee-4853-efd2-0b1f5cf135c2"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "4\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(len(user_numbers))"
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Code Club Session 1",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.7.3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
