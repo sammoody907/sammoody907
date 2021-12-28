@@ -1,0 +1,849 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "GjGkL5e_be-q"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/warwickdatascience/beginners-python/blob/master/session_two/session_two_exercises.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "l3MLZJO_be-u"
+      },
+      "source": [
+        "<center>Spotted a mistake? Report it <a href=\"https://github.com/warwickdatascience/beginners-python/issues/new\">here</a></center>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Kuh7Yowvbe-u"
+      },
+      "source": [
+        "# Beginner's Python—Session Two Homework Exercises"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "LNntmg2ebe-v"
+      },
+      "source": [
+        "## User Input"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "1-Qtw1ehbe-v"
+      },
+      "source": [
+        "Ask the user for the year, month, and day and use these to print out the date in the following format:\n",
+        "\n",
+        "`Your date is 1 January, 1970`\n",
+        "\n",
+        "(Hint: if you want to get the comma looking exactly right, you might have to use string addition)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "id": "MAEJbhVobe-w",
+        "outputId": "f6e93bb6-940a-448c-c7e9-944371c505c1",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "What is the year?\r\n",
+            "1970\n",
+            "What is the month?\n",
+            "January\n",
+            "What is the day?\n",
+            "1\n"
+          ]
+        }
+      ],
+      "source": [
+        "year=input(\"What is the year?\\r\\n\")\n",
+        "month=input(\"What is the month?\\r\\n\")\n",
+        "day=input(\"What is the day?\\r\\n\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"Your date is\",\n",
+        "      day,month,\",\",year)"
+      ],
+      "metadata": {
+        "id": "GOqVigYqb6s1",
+        "outputId": "1e180a2d-006c-4a96-f3d2-05dcd537cdd3",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Your date is 1 January , 1970\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"Your date is\",\n",
+        "      day,month+\",\",year)"
+      ],
+      "metadata": {
+        "id": "9IttCYbRcKYJ",
+        "outputId": "57e80c77-cb1b-4d63-93ed-16c150b33f2d",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Your date is 1 January, 1970\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "zCb-VYh8be-w"
+      },
+      "source": [
+        "Ask the user to input a decimal number (remember you'll need to use `float()` to convert it from a string). Multiply this $5$, subtract $1.2$ and print the result"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 6,
+      "metadata": {
+        "id": "Y8LUfcIrbe-x",
+        "outputId": "640b9720-44e0-4188-d539-c51e103b0be6",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Choose your favourite decimal number\r\n",
+            "4.5\n",
+            "If you multiply your number by 5 and then subtract 1.2, you get 21.3\n"
+          ]
+        }
+      ],
+      "source": [
+        "usernum=float(input(\"Choose your favourite decimal number\\r\\n\"))\n",
+        "print(\"If you multiply your number by 5 and then subtract 1.2, you get\", usernum*5-1.2)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "8ZXb6K4Sbe-y"
+      },
+      "source": [
+        "## Variable Types"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "q5SCMnaGbe-y"
+      },
+      "source": [
+        "What happens when you pass a decimal number (such as $3.14$) to `int()`?"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(int(3.14))\n",
+        "print(int(3.99))"
+      ],
+      "metadata": {
+        "id": "aItNDC7pfaqR",
+        "outputId": "ff39f68c-3081-4d83-8d49-b02fbcc502d1",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3\n",
+            "3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Interesting - the number is rounded down to nearest integer"
+      ],
+      "metadata": {
+        "id": "cdG7iJ83fe8-"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(round(3.14))\n",
+        "print(round(3.99))"
+      ],
+      "metadata": {
+        "id": "M7UJlHvigPq5",
+        "outputId": "c80b0302-6286-4261-b0a7-e204daf19b5c",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3\n",
+            "4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 7,
+      "metadata": {
+        "id": "CNWCB0Qzbe-z",
+        "outputId": "cc703003-50ec-4ad6-e242-b4b24e7f1a32",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 200
+        }
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "What is pi to 2 decimal places?3.14\n"
+          ]
+        },
+        {
+          "output_type": "error",
+          "ename": "ValueError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mValueError\u001b[0m                                Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-7-d33435835814>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0merrornum\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"What is pi to 2 decimal places?\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      2\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0merrornum\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mValueError\u001b[0m: invalid literal for int() with base 10: '3.14'"
+          ]
+        }
+      ],
+      "source": [
+        "errornum=int(input(\"What is pi to 2 decimal places?\"))\n",
+        "print(errornum)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "errornum2=str(input(\"What is pi to 2 decimal places?\"))\n",
+        "print(errornum2)\n",
+        "print(type(errornum2))"
+      ],
+      "metadata": {
+        "id": "2j6i2S0EevT9",
+        "outputId": "8c5314b1-3f77-4b1d-f1e5-834a3d2e717a",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "What is pi to 2 decimal places?3.14\n",
+            "3.14\n",
+            "<class 'str'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "a-3o6Np2be-z"
+      },
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "BjkZankibe-z"
+      },
+      "source": [
+        "The `min()` and `max()` functions are versatile. As well being able to input a list of numbers, you are able to pass multiple inputs to these functions, separated by commas, provided they are all of the same type. For example:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 10,
+      "metadata": {
+        "id": "tv2U8fhsbe-0",
+        "outputId": "a6d02d5f-04e7-4a06-b96d-01b93f8eda2a",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "1"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 10
+        }
+      ],
+      "source": [
+        "min(2, 5, 1)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "pb7m1vAlbe-1"
+      },
+      "source": [
+        "The versitility doesn't stop there. What happens if we put in two strings as the inputs to either `min()` or `max()`. Experiment and try to find out.\n",
+        "\n",
+        "(Hint: Try comparing each pair of `Cat`, `Dog`, and `Donkey`)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 14,
+      "metadata": {
+        "id": "t3YS_V7cbe-1",
+        "outputId": "7a5d7f3a-4c53-4abe-8933-780a438b3ca0",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            },
+            "text/plain": [
+              "'Donkey'"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 14
+        }
+      ],
+      "source": [
+        "min(\"Cat\", \"Dog\")\n",
+        "min(\"Donkey\", \"Dog\")\n",
+        "min(\"Donkey\", \"Cat\")\n",
+        "max(\"Cat\", \"Dog\")\n",
+        "max(\"Donkey\", \"Dog\")\n",
+        "max(\"Donkey\", \"Cat\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Problem above - didn't use print, therefore it just produced output for the last line of code "
+      ],
+      "metadata": {
+        "id": "E6NGiiiMf2kD"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(min(\"Cat\", \"Dog\"))\n",
+        "print(min(\"Donkey\", \"Dog\"))\n",
+        "print(min(\"Donkey\", \"Cat\"))\n",
+        "print(max(\"Cat\", \"Dog\"))\n",
+        "print(max(\"Donkey\", \"Dog\"))\n",
+        "print(max(\"Donkey\", \"Cat\"))"
+      ],
+      "metadata": {
+        "id": "0pr1PPJBf1y1",
+        "outputId": "8930d1e0-010d-4d4e-b79c-ca032dcee6aa",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Cat\n",
+            "Dog\n",
+            "Cat\n",
+            "Dog\n",
+            "Donkey\n",
+            "Donkey\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "When `max()` or `min()` act on strings, they order items alphabetically. Therefore, `max()` returns the word you'd find last in the dictionary, and `min()` the first"
+      ],
+      "metadata": {
+        "id": "JkKyIFougJF_"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "WYc6Nfbybe-1"
+      },
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "UM3pEM9Xbe-2"
+      },
+      "source": [
+        "Say you wanted to add the string `\"Time is 12:\"` to the integer `30` to get the string `\"Time is 12:30\"`. How can you use type conversion to achieve this?"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 20,
+      "metadata": {
+        "id": "PjZ-1TIdbe-2",
+        "outputId": "9a570d2a-2f50-49e1-ac0b-568e0003148b",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Time is 12:30\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(\"Time is 12:\"+str(30))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"Below is wrong way to do. Just above is from the solutions\")\n",
+        "thirty=30\n",
+        "print(type(thirty))\n",
+        "str(thirty)\n",
+        "print(type(thirty))"
+      ],
+      "metadata": {
+        "id": "fnyWH-r3h8Gh",
+        "outputId": "255ec847-3d3e-4225-f829-e42a08ddcb72",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 25,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Below is wrong way to do. Just above is from the solutions\n",
+            "<class 'int'>\n",
+            "<class 'int'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"Just above - need to convert the 30 to string rather than the thirty\")\n",
+        "str(30)\n",
+        "print(type(30))"
+      ],
+      "metadata": {
+        "id": "YPquB8F0ikes",
+        "outputId": "5f335533-2c81-42aa-db23-92d20942f34e",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Just above - need to convert the 30 to string rather than the thirty\n",
+            "<class 'int'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"Do I need to create a new variable to change 30 to a string?\")\n",
+        "strng30=str(30)\n",
+        "print(type(strng30))"
+      ],
+      "metadata": {
+        "id": "4Yhbf7B0i_2C",
+        "outputId": "4646f037-8076-45eb-897f-9edaca5f2b6d",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 32,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Do I need to create a new variable to change 30 to a string?\n",
+            "<class 'str'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "vSzmMgwvbe-2"
+      },
+      "source": [
+        "## Sum, Min, Max and Length"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "SPNGMOlNbe-2"
+      },
+      "source": [
+        "Your teammates are aged 20, 33, 45, 57, and 62. Use `input()` to get Python to ask you your age and then make a list containing the 5 ages above and your age"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 33,
+      "metadata": {
+        "id": "R7Vjme6hbe-2",
+        "outputId": "6dff783d-41e0-4c5e-8005-8a251c338095",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "What is your age fine sire?\r\n",
+            "22\n",
+            "39.833333333333336\n"
+          ]
+        }
+      ],
+      "source": [
+        "myage=int(input(\"What is your age fine sire?\\r\\n\"))\n",
+        "ages=[20, 33, 45, 57, 62, myage]\n",
+        "avg_age=(sum(ages))/(len(ages))\n",
+        "print(avg_age)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "GktXLzCObe-3"
+      },
+      "source": [
+        "Find the average age of your team and print it\n",
+        "\n",
+        "(Hint: The average age is the `sum` of all ages divided by the `len`gth of your list of ages)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "teTO47bAbe-3"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "RK4nyRljbe-3"
+      },
+      "source": [
+        "Run the following lines of code to create two lists containing the scores of 30 students in each class"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 35,
+      "metadata": {
+        "id": "0JhEyH-Xbe-3"
+      },
+      "outputs": [],
+      "source": [
+        "from random import randrange, seed\n",
+        "seed(1729)\n",
+        "class_A_scores = [randrange(101) for __ in range(30)]\n",
+        "class_B_scores = [randrange(101) for __ in range(30)]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "BpuE0x0Bbe-3"
+      },
+      "source": [
+        "Use `max()` to find which class contained the highest scoring student"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 36,
+      "metadata": {
+        "id": "O7m_-HSabe-4",
+        "outputId": "e04176bb-e1b8-4982-f66e-79e64afa5f5d",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "97\n",
+            "92\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(max(class_A_scores))\n",
+        "print(max(class_B_scores))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        ""
+      ],
+      "metadata": {
+        "id": "ifYHforWqTz_"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "_Skp7L2-be-4"
+      },
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "xtRxI0pfbe-4"
+      },
+      "source": [
+        "As mentioned above, you can find the minimum or maximum of a collection of numbers without having to first put them in a list. Use this approach to find the minumum and maximum of the numbers 4, 5, 2, and 8"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 40,
+      "metadata": {
+        "id": "xx0zxSpPbe-4",
+        "outputId": "6ba9418f-7c9e-43e9-ca31-879c8be16e94",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "8\n",
+            "2\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(max(4,5,2,8))\n",
+        "print(min(4,5,2,8))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "2MzIzMoqbe-4"
+      },
+      "source": [
+        "Ask the user for two strings and print the length of the shortest"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 41,
+      "metadata": {
+        "id": "br4UeSI0be-5",
+        "outputId": "9a29efb9-8cfe-43a6-e998-d8d4c748a654",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Please give me a short sentenceI like football\n",
+            "Please give me a longer sentence - not too long tho uWuI am absolutely obssessed with the game  of basketball\n",
+            "The length of the shortest sentence is 15 characters!\n"
+          ]
+        }
+      ],
+      "source": [
+        "string_uno=input(\"Please give me a short sentence\")\n",
+        "string_dos=input(\"Please give me a longer sentence - not too long tho uWu\")\n",
+        "length_uno=len(string_uno)\n",
+        "length_dos=len(string_dos)\n",
+        "print(\"The length of the shortest sentence is\",min(length_uno, length_dos),\"characters!\")\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "You can do it quicker!!!!!!!!"
+      ],
+      "metadata": {
+        "id": "gwZQMF2_ryJ0"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "string_ein=input(\"Please give me a short sentence\")\n",
+        "string_dos=input(\"Please give me a longer sentence - not too long tho uWu\")\n",
+        "print(\"The longer sentence has\",\n",
+        "      max(len(string_ein),len(string_dos)),\n",
+        "      \"characters!\")"
+      ],
+      "metadata": {
+        "id": "JbI5ZLbkr0GU",
+        "outputId": "455dd9ce-4bb6-45e5-a95c-963af7e58b46",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 42,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Please give me a short sentenceMy name is Jeff\n",
+            "Please give me a longer sentence - not too long tho uWuThe name is was given at birth if Jeffrey\n",
+            "The longer sentence has 41 characters!\n"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.7.3"
+    },
+    "colab": {
+      "name": "session_two_exercises.ipynb",
+      "provenance": []
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
