@@ -1,0 +1,750 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "L0RAoX9X0n6w"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/warwickdatascience/beginners-python/blob/master/session_three/session_three_blank_template.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "woqROizX0n69"
+      },
+      "source": [
+        "<center>Spotted a mistake? Report it <a href=\"https://github.com/warwickdatascience/beginners-python/issues/new\">here</a></center>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "c2TLGju60n6_"
+      },
+      "source": [
+        "# Beginner's Python—Session Three Template"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "-Ceh1HnZIsVO"
+      },
+      "source": [
+        "## Comparison Operators"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "6AZ6H-6jKoSt"
+      },
+      "source": [
+        "### Introduction\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "RnDpomX50n7E"
+      },
+      "source": [
+        "Use comparison operators to create two Boolean variables, on `True` and one `False`"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "D4l_2DsZIlgB"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "9lLW387eKgNN"
+      },
+      "source": [
+        "Check for equality of two numbers using comparisons"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "bIr0l5kJI_VV"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ThsxO5uu0n7N"
+      },
+      "source": [
+        "### Standard Puzzles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "K9th2RCW0n7O"
+      },
+      "source": [
+        "Answer the three comparison questions from the presentation"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "PcOWcB_T0n7Q"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "TsX5LUO90n7R"
+      },
+      "source": [
+        "Check whether a user inputted number is positive"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "A_plX-mb0n7S"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "qoWcju9C0n7T"
+      },
+      "source": [
+        "Create a list and check if the smallest element is equal to two"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "1OCrqU9i0n7U"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3c4xwL6o0n7V"
+      },
+      "source": [
+        "### Bonus Puzzles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "tU9gSsyi0n7V"
+      },
+      "source": [
+        "Experiment with using comparison operators on strings. What are you findings?"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "HlqyfNFe0n7X"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "yUmSuVqf0n7Z"
+      },
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "8NRWCBSG0n7a"
+      },
+      "source": [
+        "## Boolean Operators"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Bmjber3b0n7a"
+      },
+      "source": [
+        "### Introduction"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Just a note - didn't save the above answers so refer to the solutions for these** "
+      ],
+      "metadata": {
+        "id": "B4l3YdES38Fe"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "x or y is True if either of x or y are true, or also if both are true\n",
+        "\n",
+        "This obviously goes against how we'd interpret x or y in human langauge, but setting up or like this is very useful when doing more complex things in computer science "
+      ],
+      "metadata": {
+        "id": "Cnqbr6aL4DwB"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "l1i1eMZU0n7b"
+      },
+      "source": [
+        "Use the `and` operator to combine two Boolean values"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "cva2_wUb0n7c"
+      },
+      "outputs": [],
+      "source": [
+        "print(True and False)\n",
+        "print()"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "zyqw1U000n7d"
+      },
+      "source": [
+        "Likewise, use `or`"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "8au6Wuvt0n7d"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "rAi4eY880n7e"
+      },
+      "source": [
+        "Negate a Boolean value using `not`"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "gHLKyh1q0n7e"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3cKWeNnT0n7f"
+      },
+      "source": [
+        "### Standard Puzzles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "potRAkjP0n7g"
+      },
+      "source": [
+        "What do you think the Boolean expressions will evaluate to. Make your guess then check"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "k2RkXkPW0n7g"
+      },
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "7eNf4SbA0n7h"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "aVw5OXXL0n7h"
+      },
+      "source": [
+        "Create two Boolean expressions, one `True` and one `False`"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "b3MkhkWX0n7i"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "CwIiq9xD0n7i"
+      },
+      "source": [
+        "### Bonus Puzzles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "UloUzZQ60n7j"
+      },
+      "source": [
+        "Guess and check the value of the complex Boolean expression"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "YwKproC00n7k"
+      },
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "2Gij4HYx0n7k"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "pxAQpKDY0n7k"
+      },
+      "source": [
+        "## Control Flow"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "4e4v5OnQ0n7l"
+      },
+      "source": [
+        "### Introduction"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "L7e7lWGN0n7m"
+      },
+      "source": [
+        "Create an `if` statement to check if a number is positive"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "4sJv-X7t0n7m"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "uWp2ENZp0n7m"
+      },
+      "source": [
+        "Create an `if` statement with an `elif` statement following it"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "uSsnishp0n7n"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "vJiyAXsA0n7n"
+      },
+      "source": [
+        "Create an `if-elif-else` statement to check the sign of a number"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "ALULH14R0n7o"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "QlGmtLlM0n7o"
+      },
+      "source": [
+        "### Standard Puzzles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "nBZ0Qbvm0n7p"
+      },
+      "source": [
+        "Ask for a users age and use a control flow sequence with two `elif` statements to print an appropriate response"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "KA_4dnLE0n7q"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "rScgnMkc0n7q"
+      },
+      "source": [
+        "Create a random number between one and ten"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "Wdb0eiYc0n7r"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "qZ-OR7bQ0n7s"
+      },
+      "source": [
+        "Ask the user to guess the number and print an appropriate response"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "Fi0_Xv_h0n7s"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "F2U2Gdeu0n7t"
+      },
+      "source": [
+        "### Bonus Puzzles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "VVUDUY7A0n7t"
+      },
+      "source": [
+        "Ask the user for a decimal number and round it. Print in which direction it was rounded in using control flow"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "cLrnc2C90n7u"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "v4zlYC4b0n7u"
+      },
+      "source": [
+        "## While Loops"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Ym2gIEKp0n7v"
+      },
+      "source": [
+        "### Introduction"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ChHW9aS00n7v"
+      },
+      "source": [
+        "Use a loop to print numbers starting at $4$ and increasing by $5$ until this surpasses $20$"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "u2B8pT3L0n7w"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "WrMkxw_e0n7w"
+      },
+      "source": [
+        "Use a `while` loop to enforce that a user inputs a positive number"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "SWjOK0tL0n7w"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "q0f7stDg0n7x"
+      },
+      "source": [
+        "### Standard Puzzles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "o09Bndnq0n7x"
+      },
+      "source": [
+        "Count down from 10 then shout \"Blast off!\""
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "hw3GkUH40n7y"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "g935TLo40n7y"
+      },
+      "source": [
+        "### Bonus Puzzles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Egn2SGSu0n7z"
+      },
+      "source": [
+        "Repeat the above puzzle but allow the user to specify a starting point (to avoid an infinite loop, you likely want to validate the input first)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "aPrKhYuw0n7z"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "x80odFxa0n70"
+      },
+      "source": [
+        "Repeat your above code using assignment operators"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "jxXyiaIq0n71"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "tqpAHicO0n71"
+      },
+      "source": [
+        "Change your code so only even numbers in the countdown are printed"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "I3ferrms0n72"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Code Club Session 1",
+      "provenance": []
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.7.3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
